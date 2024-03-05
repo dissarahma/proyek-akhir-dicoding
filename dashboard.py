@@ -47,9 +47,8 @@ def create_weather_rent_df(df):
     })
     return weather_rent_df
 
-day_df = pd.read_csv("day_df.csv")
-hours_df = pd.read_csv("hour_df.csv")
-
+day_df = pd.read_csv("dashboard/day_df.csv")
+hours_df = pd.read_csv("dashboard/hour_df.csv")
 datetime_columns = ["date"]
 day_df.sort_values(by="date", inplace=True)
 day_df.reset_index(inplace=True)
@@ -117,7 +116,7 @@ ax.plot(
     day_df["count_column"],
     marker='o', 
     linewidth=2,
-    color="#FFC0CB"
+    color="#90CAF9"
 )
 ax.tick_params(axis='y', labelsize=20)
 ax.tick_params(axis='x', labelsize=15)
@@ -131,7 +130,7 @@ sizes = [18.8, 81.2]
 explode = (0, 0.1)
 
 fig1, ax1 = plt.subplots()
-ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',colors=["#D3D3D3", "#90CAF9"],
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',colors=["#ff0000", "#72BCD4"],
         shadow=True, startangle=90)
 ax1.axis('equal')
 
@@ -141,7 +140,7 @@ weather_rent_df = create_weather_rent_df(day_df)
 st.subheader("Penyewaan Sepeda berdasarkan Cuaca")
 fig, ax = plt.subplots(figsize=(16, 8))
 
-colors=["tab:blue", "tab:orange", "tab:green"]
+colors = ["#FFC0CB", "#90CAF9", "#D3D3D3"]
 
 sns.barplot(
     x=weather_rent_df.index,
