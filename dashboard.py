@@ -47,8 +47,8 @@ def create_weather_rent_df(df):
     })
     return weather_rent_df
 
-day_df = pd.read_csv("dashboard/day_df.csv")
-hours_df = pd.read_csv("dashboard/hour_df.csv")
+day_df = pd.read_csv("day_df.csv")
+hours_df = pd.read_csv("hour_df.csv")
 datetime_columns = ["date"]
 day_df.sort_values(by="date", inplace=True)
 day_df.reset_index(inplace=True)
