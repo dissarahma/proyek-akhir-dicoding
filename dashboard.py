@@ -108,7 +108,7 @@ with col3:
     total_sum = cas_df.casual_sum.sum()
     st.metric("Total Casual", value=total_sum)
 
-st.subheader("Tren penyewaan sepeda dalam beberapa tahun terakhir")
+st.subheader("Tren Penyewaan Sepeda pada Tahun 2011 dan 2012")
 
 fig, ax = plt.subplots(figsize=(16, 10))
 ax.plot(
