@@ -123,7 +123,7 @@ ax.tick_params(axis='x', labelsize=15)
 st.pyplot(fig)
 
 
-st.subheader("Perbandingan antara Penyewa Registered dengan Penyewa Casual")
+st.subheader("Perbandingan Jumlah Transaksi antara Pelanggan Registered dengan Pelanggan Casual")
 
 labels = 'casual', 'registered'
 sizes = [18.8, 81.2]
